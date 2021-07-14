@@ -1,5 +1,5 @@
 
-var user = sessionStorage.getItem('userDetail')
+var user = localStorage.getItem('userDetail')
 
 var userName = JSON.parse(user).name
 
