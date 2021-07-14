@@ -13,7 +13,7 @@ var userDetail = {
     email: email.value,
     password: password.value
 }
-localStorage.setItem('userDetail',JSON.stringify(userDetail))
+sessionStorage.setItem('userDetail',JSON.stringify(userDetail))
 }
 
 
