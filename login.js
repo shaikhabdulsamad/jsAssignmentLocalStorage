@@ -4,7 +4,7 @@ function gotohome() {
 
     var a = localStorage.getItem('userDetail')
     
-    if (email1.value === JSON.parse(a).email && password1.value === JSON.parse(a).password) {
+    if (email1.value === JSON.parse(a).email || JSON.parse(a).email === "" && password1.value === JSON.parse(a).password || JSON.parse(a).password === " ") {
        
         location.href = "home.html"
     }
