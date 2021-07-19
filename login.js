@@ -3,6 +3,8 @@ function gotohome() {
     var password1 = document.getElementById("inputPassword")
 
     var a = localStorage.getItem('userDetail')
+
+    
     
     if (email1.value === "" || password1.value === "") {
        
