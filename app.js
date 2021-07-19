@@ -4,6 +4,20 @@ function gotonext() {
     var email = document.getElementById("inputEmail")
     var password = document.getElementById("inputPassword")
 
+    var a = JSON.parse(localStorage.getItem('userDetail'));
+    var flag = false;
+
+    for (var i = 0; i < a.length; i++) {
+
+        if (email.value === a[i].email || number.value === a[i].number) {
+            flag = true;
+            alert("email or password already exist")
+            break
+
+        }
+    }
+
+
     if (email.value !== "" || password.value !== "" || name.value !== "" || number.value !== "") {
 
         if (localStorage.getItem('userDetail') === null) {
@@ -34,18 +48,7 @@ function gotonext() {
 
     }
 
-    var a = JSON.parse(localStorage.getItem('userDetail'));
-    var flag = false;
-
-    for(var i = 0; i < a.length; i++){
-
-        if(email.value === a[i].email || number.value === a[i].number){
-            flag = true;
-    alert("email or password already exist")
-    break
-    
-        }
-    }
+   
 }
 
 
