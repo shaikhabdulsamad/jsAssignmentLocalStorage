@@ -18,7 +18,7 @@ function gotonext() {
     }
 
 
-    if (email.value !== "" || password.value !== "" || name.value !== "" || number.value !== "") {
+    if (flag == false && email.value !== "" || password.value !== "" || name.value !== "" || number.value !== "") {
 
         if (localStorage.getItem('userDetail') === null) {
             var abc = [];
