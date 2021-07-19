@@ -16,9 +16,11 @@ function gotonext() {
 
         }
     }
+if(flag == false){
 
 
-    if (flag == false && email.value !== "" || password.value !== "" || name.value !== "" || number.value !== "") {
+
+    if (email.value !== "" || password.value !== "" || name.value !== "" || number.value !== "") {
 
         if (localStorage.getItem('userDetail') === null) {
             var abc = [];
@@ -47,7 +49,7 @@ function gotonext() {
         alert('fill all fields')
 
     }
-
+}
    
 }
 
