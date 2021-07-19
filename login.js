@@ -2,18 +2,29 @@ function gotohome() {
     var email1 = document.getElementById("inputEmail")
     var password1 = document.getElementById("inputPassword")
 
-    var a = localStorage.getItem('userDetail')
+    var a = JSON.parse(localStorage.getItem('userDetail'));
 
+    var flag= false
     
-    
-    if (email1.value === "" || password1.value === "") {
+    for(var i = 0; i < a.length; i++){
+        
+        // console.log(a[i].email)
        
+    if (email1.value === a[i].email && password1.value === a[i].password){
+        flag = true
+            location.href = "home.html"
+        }
+
+       
+    }
+
+    if (email1.value === "" || password1.value === ""  ) {
+           
         alert("fill both fields")
     }
-    else if (email1.value === JSON.parse(a).email && password1.value === JSON.parse(a).password){
-        location.href = "home.html"
-    }
-     else {
+
+    else if(flag == false){
         alert("wrong email or password")
     }
+    
 }
